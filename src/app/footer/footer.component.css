@@ -1,0 +1,48 @@
+footer {
+  background-color: #343a40;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+
+footer .btn-floating {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+footer .btn-floating:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+footer .text-uppercase {
+  font-weight: bold;
+}
+
+footer ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .p-3 {
+  font-size: 0.875rem;
+}

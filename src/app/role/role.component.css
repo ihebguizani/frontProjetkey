@@ -1,0 +1,10 @@
+.delete-btn {
+  font-size: 0.875rem; /* Adjust font size if needed */
+  padding: 5px 10px; /* Adjust padding for a better button size */
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000 !important; /* Darker red on hover */
+  border-color: #cc0000 !important; /* Darker border on hover */
+}

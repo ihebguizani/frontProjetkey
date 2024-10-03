@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+<div class="container">
+
+  <h2>Clients</h2>
+  <ul>
+    <li *ngFor="let client of clients">{{ client.clientId }}</li>
+  </ul>
+
+  <h2>Search Client By Name</h2>
+  <div class="search-container">
+    <input [(ngModel)]="clientName" placeholder="Client Name" />
+    <button (click)="searchClient()">Search</button>
+  </div>
+  <ul>
+    <li *ngFor="let client of searchedClients">
+      {{ client.clientId }} - ID: {{ client.id }}
+    </li>
+  </ul>
+
+  <h2>Create Role</h2>
+  <div class="create-role-container">
+    <input [(ngModel)]="roleName" placeholder="Role Name" />
+    <button (click)="createRole()">Create Role</button>
+  </div>
+</div>

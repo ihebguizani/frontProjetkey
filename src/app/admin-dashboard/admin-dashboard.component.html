@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h1 class="mb-4">Add Role</h1>
+
+      <div class="form-group mb-3">
+        <label for="roleName" class="form-label">Role Name:</label>
+        <input
+          type="text"
+          id="roleName"
+          class="form-control"
+          placeholder="Enter role name"
+          [(ngModel)]="roleName">
+      </div>
+
+      <div class="text-end">
+        <button
+          class="btn btn-primary"
+          (click)="addRole()">
+          Add Role
+        </button>
+      </div>
+
+      <div *ngIf="message" class="alert alert-success mt-3">
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  </div>
+</div>

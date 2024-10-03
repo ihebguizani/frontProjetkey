@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Edit Application</h2>
+  <form (ngSubmit)="updateApplication()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <input type="text" id="type" [(ngModel)]="application.type" name="type" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <input type="text" id="status" [(ngModel)]="application.status" name="status" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="createdAt">Created At</label>
+      <input type="date" id="createdAt" [(ngModel)]="application.createdAt" name="createdAt" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+</div>

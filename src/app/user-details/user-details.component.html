@@ -1,0 +1,57 @@
+<div *ngIf="user" class="card mb-3">
+  <div class="card-header bg-primary text-white d-flex align-items-center">
+    <img src="assets/avatar.png" alt="User Avatar" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+    <h2 class="mb-0">User Details</h2>
+  </div>
+  <div class="card-body">
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>ID:</strong></div>
+      <div class="col-sm-9">{{ user.id }}</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>Username:</strong></div>
+      <div class="col-sm-9">{{ user.username }}</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>First Name:</strong></div>
+      <div class="col-sm-9">{{ user.firstName }}</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>Last Name:</strong></div>
+      <div class="col-sm-9">{{ user.lastName }}</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>Email:</strong></div>
+      <div class="col-sm-9">{{ user.email }}</div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>Enabled:</strong></div>
+      <div class="col-sm-9">
+        <span [class]="'badge ' + (user.enabled ? 'bg-success' : 'bg-danger')">
+          {{ user.enabled ? 'Yes' : 'No' }}
+        </span>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-3"><strong>RealmRoles:</strong></div>
+      <div class="col-sm-9">{{ user.clientRoles }}</div>
+    </div>
+    <div class="row mb-3" *ngIf="user.requiredActions && user.requiredActions.length">
+      <div class="col-sm-3"><strong>Required Actions:</strong></div>
+      <div class="col-sm-9">{{ user.requiredActions.join(', ') }}</div>
+    </div>
+    <h3 class="mt-4">Access</h3>
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Manage Group Membership:</strong> {{ user.access.manageGroupMembership }}</li>
+      <li class="list-group-item"><strong>View:</strong> {{ user.access.view }}</li>
+      <li class="list-group-item"><strong>Map Roles:</strong> {{ user.access.mapRoles }}</li>
+      <li class="list-group-item"><strong>Impersonate:</strong> {{ user.access.impersonate }}</li>
+      <li class="list-group-item"><strong>Manage:</strong> {{ user.access.manage }}</li>
+    </ul>
+  </div>
+  <div class="card-footer text-end">
+    <button class="btn btn-danger" (click)="onDelete(user.id)">
+      <i class="bi bi-trash"></i> Delete User
+    </button>
+  </div>
+</div>

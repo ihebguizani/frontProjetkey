@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+
+<div class="user-list-container" *ngIf="users.length > 0; else noUsersTemplate">
+  <ul class="user-list list-group">
+    <li *ngFor="let user of users" class="user-list-item list-group-item d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="assets/avatar.png" alt="{{ user.username }}" class="avatar me-3">
+        <div class="user-details">
+          <button (click)="details(user.id)" class="btn btn-link p-0"><span class="username">{{ user.username }}</span></button>
+        </div>
+      </div>
+      <button (click)="openAssignRoleModal(user.id)" class="btn btn-primary btn-sm">Assign Role</button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noUsersTemplate>
+  <div class="no-users alert alert-warning">
+    No users found.
+  </div>
+</ng-template>
+
+<!-- Modal -->
+<app-simple-modal [visible]="showModal" (close)="closeModal()">
+  <h2>Assign Role</h2>
+  <div class="form-group">
+    <label for="roleSelect">Select Role</label>
+    <select id="roleSelect" class="form-select" [(ngModel)]="selectedRole" name="role" required>
+      <option *ngFor="let role of roles" [value]="role.name">{{ role.name }}</option>
+    </select>
+  </div>
+  <button (click)="assignRole()" class="btn btn-primary">Assign Role</button>
+</app-simple-modal>

@@ -1,0 +1,134 @@
+/* Style global */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  color: #343a40;
+}
+
+.navbar {
+  background-color: #28a745;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.services {
+  padding: 60px 0;
+}
+
+.service-item {
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.service-item h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.testimonial {
+  background-color: #28a745;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.testimonial h5 {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Assure que toutes les cartes de services ont la même taille */
+.service-item {
+  min-height: 350px;
+  max-height: 350px;
+}
+/* Style global */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff; /* Bleu professionnel */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d1ecf1;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2855, 55, 55, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: #fff;
+}
+

@@ -1,0 +1,40 @@
+<app-nav-bar-u></app-nav-bar-u>
+<div class="container">
+  <h2>Applications</h2>
+
+  <!-- Create Button -->
+  <div class="mb-3">
+    <button class="btn btn-success" [routerLink]="['/create']">
+      Create New Application
+    </button>
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Status</th>
+      <th>Created At</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let application of applications">
+      <td>{{ application.applicationId }}</td>
+      <td>{{ application.type }}</td>
+      <td>{{ application.status }}</td>
+      <td>{{ application.createdAt }}</td>
+      <td>
+        <button class="btn btn-primary" [routerLink]="['/edit', application.applicationId]">
+          Edit
+        </button>
+
+        <button class="btn btn-danger" (click)="deleteApplication(application.applicationId)">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
